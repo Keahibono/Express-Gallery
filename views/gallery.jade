@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h2 #{singlePhoto.author}
+  img(src='#{singlePhoto.link}')
+  h2 #{singlePhoto.description}
+
+block sidebar
+  ul
+    each image in table
+      img(src=image.link)
+      h3 #{image.author} - #{image.link}

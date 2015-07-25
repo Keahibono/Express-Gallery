@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  form(method="POST")
+    input(type="hidden", value="PUT", name="_method")
+    label Author:
+    input(type="text", name="author")
+    label Image/URL:
+    input(type="text", name="link")
+    label Description
+    input(type="text", name="description")
+    input(type="submit", value="Edit Photo in Gallery")
