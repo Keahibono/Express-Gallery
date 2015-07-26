@@ -22,3 +22,15 @@ h3{
   color: lightgrey;
   font-style: 10px;
 }
+
+h4 {
+  font-family: arial, verdana, georgia;
+  color: lightgrey;
+  font-style: 8px;
+}
+
+h6 {
+  font-family: arial, verdana, georgia;
+  color: lightgrey;
+  font-style: 6px;
+}

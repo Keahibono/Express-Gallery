@@ -1,4 +1,15 @@
 extends layout
 
+block content
+  div.row
+    div.large-12.columns
+      img(src='http://placekitten.com/g/1280/480')
+  br
+  div.row
+    each image in table
+      div.medium-4.columns
+        a(href="/gallery/#{image.id}")
+          img(src=image.link)
+        h6 #{image.author} -- #{image.link}
 
 

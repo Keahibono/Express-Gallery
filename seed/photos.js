@@ -6,7 +6,7 @@ models.sequelize
 .then(function(){
   Photo.bulkCreate([
     {
-      author: "Mountain Hill Cabin Kitten",
+      author: "Mountain Kitten",
       link: "https://placekitten.com/640/480?image=12",
       description: "placekittens.com"
     },
@@ -16,13 +16,28 @@ models.sequelize
       description: "placekittens.com"
     },
     {
-      author: "Mountain Hill Cabin Kitten",
+      author: "Adult Kitten",
       link: "https://placekitten.com/640/480?image=11",
       description: "placekittens.com"
     },
     {
-      author: "Mountain Hill Cabin Kitten",
+      author: "My Kitten",
       link: "https://placekitten.com/640/480?image=18",
+      description: "placekittens.com"
+    },
+    {
+      author: "Buutercup Kitten",
+      link: "https://placekitten.com/640/480?image=1",
+      description: "placekittens.com"
+    },
+    {
+      author: "Sexxy Kitten",
+      link: "https://placekitten.com/640/480?image=13",
+      description: "placekittens.com"
+    },
+    {
+      author: "Multi Kitten",
+      link: "https://placekitten.com/640/480?image=2",
       description: "placekittens.com"
     }
   ])

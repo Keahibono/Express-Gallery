@@ -11,7 +11,8 @@ block content
     div.small-4.columns
       each image in table
         if(singlePhoto.id !== image.id)
-          img(src=image.link)
-          h4 #{image.author} - #{image.link}
+          a(href="/gallery/#{image.id}")
+            img(src=image.link)
+          h6 #{image.author} - #{image.link}
 
 

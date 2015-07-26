@@ -31,22 +31,38 @@ app.use(methodOverride(function(req, res, next){
 
 // app.use('/gallery', require('./route/gallery'));
 
-app.get('/',function (req, res){
-  res.render('gallery');
-});
+router.route('/')
+  .get(function (req, res){
+    return Photo.findAll({
+      order: [
+        [models.Sequelize.fn('RANDOM')]
+      ],
+      limit: 6
+    })
+    .then(function(table){
+      return res.render('gallery', {
+              table: table
+      })
+    })
+  });
 
-// router.use('/:id', function (req, res, next){
-//   if (req.params.id === 0 || req.params.id == null){
+
+// router.route('/gallery/:id', function (req, res, next){
+//   if (req.params.id === 0 || req.params.id === void(0)){
 //     res.redirect('/');
 //   }
 // });
 
 router.route('/gallery/:id')
   .get(function (req, res){
-    Photo.findAll({})
+    return Photo.findAll({
+      order: [
+        [models.Sequelize.fn('RANDOM')]
+      ],
+      limit: 4
+    })
     .then(function (table){
-
-      Photo.findOne({
+      return Photo.findOne({
         where : {id: req.params.id}
       })
       .then(function(photo){
