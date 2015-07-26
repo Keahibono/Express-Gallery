@@ -83,7 +83,7 @@ app.get('/edit', function (req, res){
 });
 
 
-app.post('/new', function(req, res, next){
+app.post('/new_photo', function(req, res, next){
   Photo.create({
     author: req.body.author,
     link: req.body.link,

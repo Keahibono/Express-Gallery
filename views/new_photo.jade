@@ -2,10 +2,18 @@ extends layout
 
 block content
   form(method="POST")
-    label Author:
-    input(type="text", name="author")
-    label Image/URL:
-    input(type="text", name="link")
-    label Description
-    input(type="text", name="description")
-    input(type="submit", value="Add Photo to Gallery")
+    div.row
+      div.small-4.small-centered.columns
+        label Author:
+        input(type="text", name="author")
+    div.row
+      div.small-4.small-centered.columns
+        label Image/URL:
+        input(type="text", name="link")
+    div.row
+      div.small-4.small-centered.columns
+        label Description
+        input(type="text", name="description")
+    div.row
+      div.small-4.small-centered.columns
+        input(type="submit", value="Add Photo to Gallery")
