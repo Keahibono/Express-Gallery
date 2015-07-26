@@ -4,20 +4,22 @@ var router = express.Router();
 var models  = require('./models');
 var Photo = models.Photo;
 
+
 var methodOverride = require('method-override');
 var bodyParser = require('body-parser');
-
+var path = require('path');
 var router = express.Router();
 
 var config = require('./config/config.json');
 
-app.set('views', './views');
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
+app.use(express.static(__dirname + '/public'));
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(router);
 
-app.use(express.static(__dirname, + '/public'));
-app.use(bodyParser.urlencoded({ extended: false }));
+
 
 app.use(methodOverride(function(req, res, next){
   if(req.body && typeof req.body == 'object' && '_method' in req.body){
@@ -48,7 +50,7 @@ router.route('/gallery/:id')
         where : {id: req.params.id}
       })
       .then(function(photo){
-        return res.render('gallery', {
+        return res.render('id', {
                                       singlePhoto: photo,
                                       table: table
         });

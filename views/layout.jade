@@ -2,11 +2,22 @@
 html(lang="en")
 head
   meta(charset="UTF-8")
-  title _Architekt
+  title _ARKITTEN
+  link(rel="stylesheet" href="/css/foundation.css")
+  script(src="/js/vendor/modernizr.js")
+  link(href='/css/styles.css' rel="stylesheet")
 body
-  h1 _Architekt
-  p Welcome to our online portfolio, we are small group of passionate designers and architects, looking to change and create amazing digital images to inspire others to follow in our innovative steps. Free Architekt Wordpress Theme
+  div.row
+    div.small-8.columns
+      h1 _ARKITTEN
+    div.small-4.columns
+      h6 Welcome to our online portfolio, we are small group of passionate designers and architects, looking to change and create amazing digital images to inspire others to follow in our innovative steps. Free Architekt Wordpress Theme
 
   block content
 
   block sidebar
+
+  script(src="/js/vendor/jquery.js")
+  script(src="/js/foundation.min.js")
+  script.
+    $(document).foundation();

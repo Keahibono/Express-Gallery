@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  div.row
+    div.small-8.columns
+      h5 #{singlePhoto.author} - #{singlePhoto.description}
+  div.row
+    div.small-8.columns
+      img(src='#{singlePhoto.link}')
+      h4 #{singlePhoto.description}
+    div.small-4.columns
+      each image in table
+        if(singlePhoto.id !== image.id)
+          img(src=image.link)
+          h4 #{image.author} - #{image.link}
+
+
